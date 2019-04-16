@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  # acts_as_token_authentication_handler_for User, except: [ :index ]
+
   def index
     render json: Article.all
   end

@@ -4,6 +4,7 @@ RSpec.describe ArticlesController, type: :controller do
   describe "GET #create" do
     it 'creates an album with valid data' do
       user = User.create(name: 'toto')
+      @request.headers['X-User-Token'] = user.authentication_token
       post :create, params: {
                           article: {
                                   content: 'awesome content',
