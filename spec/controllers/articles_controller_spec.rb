@@ -19,6 +19,20 @@ RSpec.describe ArticlesController, type: :controller do
   end
 
 
+  it 'deletes an article' do
+    user = User.create(name: 'toto')
+    article = Article.create(title: 'title',
+      content: 'content',
+      user: user)
+    article_id = article.id
+
+    delete 'destroy', params: { id: article_id }
+
+    expect(response.body).to be_empty
+    expect(response).to have_http_status(204)
+    expect(Article.ids).not_to include article_id
+    end
+
   it 'shows all articles' do
     user = User.create!(name: 'roger')
     another_user = User.create!(name: 'other_user')
