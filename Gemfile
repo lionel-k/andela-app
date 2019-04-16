@@ -10,7 +10,8 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 
-gem 'simple_token_authentication'
+# gem 'devise'
+# gem 'simple_token_authentication'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

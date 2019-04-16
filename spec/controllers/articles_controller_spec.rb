@@ -2,9 +2,8 @@ require 'rails_helper'
 
 RSpec.describe ArticlesController, type: :controller do
   describe "GET #create" do
-    it 'creates an album with valid data' do
+    it 'creates an article with valid data' do
       user = User.create(name: 'toto')
-      @request.headers['X-User-Token'] = user.authentication_token
       post :create, params: {
                           article: {
                                   content: 'awesome content',
@@ -39,7 +38,7 @@ RSpec.describe ArticlesController, type: :controller do
 
   describe 'GET #index' do
     it 'shows all articles' do
-      user = User.create!(name: 'roger')
+      user = User.create(name: 'roger')
       another_user = User.create!(name: 'other_user')
       5.times do |i|
         Article.create!(title: "title-#{i}",

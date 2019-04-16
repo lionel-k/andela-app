@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_16_160835) do
+ActiveRecord::Schema.define(version: 2019_04_16_151445) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "user_id"
@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 2019_04_16_160835) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "authentication_token", limit: 30
-    t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
   end
 
 end
