@@ -17,4 +17,27 @@ RSpec.describe ArticlesController, type: :controller do
     expect(json['user_id']).to eq(user.id)
     expect(response).to have_http_status(200)
   end
+
+
+  it 'shows all articles' do
+    user = User.create!(name: 'roger')
+    another_user = User.create!(name: 'other_user')
+    5.times do |i|
+      Article.create!(title: "title-#{i}",
+        content: "content-#{i}",
+        user: user)
+    end
+
+    5.times do |i|
+      Article.create!(title: "title-#{i}",
+        content: "content-#{i}",
+        user: another_user)
+    end
+
+    get :index
+
+    json = JSON.parse(response.body)
+    expect(json.size).to eq(10)
+    expect(response).to have_http_status(200)
+  end
 end

@@ -1,10 +1,13 @@
 class ArticlesController < ApplicationController
   def index
-    render json: User.all
+    render json: Article.all
   end
 
   def create
     render json: Article.create!(article_params)
+  end
+
+  def destroy
   end
 
   private

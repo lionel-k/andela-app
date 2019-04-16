@@ -204,7 +204,7 @@
         null,
         null,
         1,
-        2,
+        1,
         null,
         null,
         null,
@@ -216,8 +216,6 @@
         1,
         1,
         1,
-        1,
-        null,
         1,
         null
       ],
@@ -232,7 +230,7 @@
         null,
         null,
         1,
-        6,
+        7,
         null,
         null,
         1,
@@ -240,21 +238,24 @@
         null,
         null,
         1,
-        6,
+        7,
         null,
         null,
         1,
-        6,
+        7,
         null,
         null
       ],
       "/Users/lionel/code/lionel-k/andela-interview/andela-app/app/controllers/articles_controller.rb": [
         1,
         1,
-        0,
+        1,
         null,
         null,
         1,
+        1,
+        null,
+        null,
         1,
         null,
         null,
@@ -365,6 +366,6 @@
         null
       ]
     },
-    "timestamp": 1555429532
+    "timestamp": 1555430072
   }
 }
